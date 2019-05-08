@@ -46,48 +46,18 @@ console.log(balanceString(balanceIntrger));
 
 // Третья задача
 
-let userScore;
+const userScore;
 
 userScore = [74989, 74990, 84990, 62000, 58480, 61800];
-function maxScore(score) {
-  let max = 0;
-  let maxValue = 0;
-  for(let value of score) {
-    if (value > max) {
-      maxValue = value;
-      max = value;
-    }
-  }
-  return maxValue;
-}
 
-console.log(maxScore(userScore));
+const endArr = userScore.sort(function(a,b) { 
+      return b - a ;
+     });
+
+console.log(endArr[0]);
 
 // Среднее из трех максимальных
 
-function averageScore(score) {
-  let maxValue = 0;
-  let endArr = [];
-  let sum = 0;
-  let average = 0;
-  while (endArr.length < 3) {
-    let index = 0;
-    let max = 0;
-    for(let value of score){
-      if (value > max) {
-        maxValue = value;
-        max = value;
-      }
-    }
-    endArr.push(maxValue);
-    index = score.indexOf(maxValue);
-    score.splice(index, 1);
-  }
-  for(let value of endArr) {
-    sum += value;
-    average = sum / 3;
-  }
-  return average;
-}
+const average = (maxArr[0] + maxArr[1] + maxArr[2]) / 3;
 
-console.log(averageScore(userScore));
+console.log(average);
