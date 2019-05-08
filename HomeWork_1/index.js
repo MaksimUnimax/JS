@@ -38,11 +38,13 @@ function endWord(n, text_forms) {
         return text_forms[2];
     }
 
-function balanceString(balance) {
-    return `Ваш баланс: ${balance} ${endWord(balance,["балл", "балла", "баллов"])}`;
+function balanceString(string, balance) {
+    let str = string[0];
+    return `${str} ${balance} ${endWord(balance,["балл", "балла", "баллов"])}`;
 }
 
-console.log(balanceString(balanceIntrger));
+const balance = balanceString`Ваш баланс: ${balanceIntrger}`;
+console.log(balance);
 
 // Третья задача
 
