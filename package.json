@@ -6,7 +6,8 @@
   "scripts": {
     "start": "live-server JS",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel JSfile -d dist"
+    "build": "babel src -d dist",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
